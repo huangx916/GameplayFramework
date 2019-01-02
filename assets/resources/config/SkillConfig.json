@@ -1,0 +1,5 @@
+[
+{"id":0,"type":0,"value1":"0.5 ","value2":1,"describe":"%s% probability to slow down the target for 1 second"},
+{"id":1,"type":1,"value1":2 ,"value2":0,"describe":"%s% probability to crit the target for double damage"},
+{"id":2,"type":2,"value1":1 ,"value2":0,"describe":"%s% probability to stun the target for 1 second"}
+]
