@@ -38,6 +38,10 @@ export class UIManager
                 cc.log(error);
                 return;
             }
+            if(this.getUI(uiClass))
+            {
+                return;
+            }
             let uiNode: cc.Node = cc.instantiate(prefab);
             uiNode.parent = this.uiRoot;
             //zOrder && uiNode.setLocalZOrder(zOrder);
