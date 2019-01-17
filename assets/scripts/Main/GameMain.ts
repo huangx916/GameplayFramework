@@ -3,6 +3,7 @@ import { GameController } from "../Manager/GameController";
 import { ListenerManager } from "../Manager/ListenerManager";
 import { ListenerType } from "../Data/ListenerType";
 import { LoadingUI } from "../UI/LoadingUI";
+import { LogWrap } from "../Utils/LogWrap";
 
 const {ccclass, property} = cc._decorator;
 
@@ -14,7 +15,10 @@ export class GameMain extends cc.Component
 
     onLoad()
     {
-        
+        LogWrap.log("test log");
+        LogWrap.info("test info");
+        LogWrap.warn("test warn");
+        LogWrap.err("test err");
     }
 
     start()
