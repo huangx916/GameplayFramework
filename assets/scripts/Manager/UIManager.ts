@@ -83,7 +83,11 @@ export class UIManager
         }
         else
         {
-            this.openUI(uiClass, 0, callback);
+            this.openUI(uiClass, 0, ()=>{
+                callback&&callback();
+                let ui = this.getUI(uiClass);
+                ui.onShow();
+            });
         }
     }
 
