@@ -16,7 +16,7 @@ gulp.task('default', function (cb) {
         .on("end", cb);
 });
 
-// 混淆
+// 混淆方法一：
 // gulp.task("default", function (cb) {
 //     gulp.src(["./build/fb-instant-games/Dragon/src/project.js"])// 参数含义  地址  https://github.com/javascript-obfuscator/javascript-obfuscator#javascript-obfuscator-options
 //         .pipe(javascriptObfuscator({
@@ -28,3 +28,14 @@ gulp.task('default', function (cb) {
 //         .pipe(gulp.dest("./build/fb-instant-games/Dragon/src/")
 //             .on("end", cb));
 // });
+
+// 混淆方法二：
+var javascriptObfuscator = require("gulp-javascriptobfuscator");
+gulp.task("default", function (cb) {
+    gulp.src(["./build/fb-instant-games/Dragon/src/project.js"])
+        .pipe(javascriptObfuscator({
+            exclusions: ["^NumberUtil"]
+        }))
+        .pipe(gulp.dest("./build/fb-instant-games/Dragon/src/")
+            .on("end", cb));
+});
