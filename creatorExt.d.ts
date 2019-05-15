@@ -11,4 +11,9 @@ module cc
         // callback function
         escape();
     }
+
+    interface Node
+    {
+        _touchListener;
+    }
 }

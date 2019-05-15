@@ -15,14 +15,23 @@ export class MainUI extends BaseUI {
     private soundOpenStateNode: cc.Node = null;
     @property(cc.Node)
     private soundCloseStateNode: cc.Node = null;
+    @property(cc.Node)
+    private overlayNode: cc.Node = null;
+
+    private _isSwallow: boolean = false;
 
     onLoad()
     {
-        AudioManager.getInstance().playBGM("bgm");
+        this.overlayNode.on(cc.Node.EventType.TOUCH_START, this.onTouchStart, this);
+        if (this.overlayNode._touchListener) {
+            this.overlayNode._touchListener.setSwallowTouches(this._isSwallow);
+        }
     }
 
     start()
     {
+        AudioManager.getInstance().playBGM("bgm");
+
         this.initUI();
     }
 
@@ -38,6 +47,10 @@ export class MainUI extends BaseUI {
         this.soundOpenStateNode.active = !gameData.playerInfo.closeAudio;
     }
 
+    onTouchStart()
+    {
+        cc.log("onOverlay TouchStart");
+    }
     
     onBtnSoundOpenState()
     {

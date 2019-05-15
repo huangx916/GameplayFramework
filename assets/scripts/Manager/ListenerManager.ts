@@ -150,8 +150,24 @@ export class ListenerManager
 		if (!predicate) {
 			return;
 		}
-		for (let [type, listenerMap] of this.mListenerMap) {
-			for (let [caller, listenerList] of listenerMap) {
+		// for (let [type, listenerMap] of this.mListenerMap) {
+		// 	for (let [caller, listenerList] of listenerMap) {
+		// 		for (let index = listenerList.length - 1; index >= 0; --index) {
+		// 			let delegate = listenerList[index];
+		// 			if (predicate(type, caller, delegate)) {
+		// 				listenerList.splice(index, 1);
+		// 			}
+		// 		}
+		// 		if (listenerList.length <= 0) {
+		// 			listenerMap.delete(caller);
+		// 		}
+		// 	}
+		// 	if (listenerMap.size <= 0) {
+		// 		this.mListenerMap.delete(type);
+		// 	}
+		// }
+		this.mListenerMap.forEach((listenerMap, type)=>{
+			listenerMap.forEach((listenerList, caller)=>{
 				for (let index = listenerList.length - 1; index >= 0; --index) {
 					let delegate = listenerList[index];
 					if (predicate(type, caller, delegate)) {
@@ -161,11 +177,11 @@ export class ListenerManager
 				if (listenerList.length <= 0) {
 					listenerMap.delete(caller);
 				}
-			}
+			});
 			if (listenerMap.size <= 0) {
 				this.mListenerMap.delete(type);
 			}
-		}
+		});
 	}
 
 	private find(type: string, caller: any, listener: Function): Delegate {
