@@ -51,7 +51,7 @@ export class UIManager
             this.uiList.push(ui);
             if(callback)
             {
-                callback(args);
+                callback(ui, args);
             }
         });
     }
