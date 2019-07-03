@@ -43,8 +43,8 @@ export class MainUI extends BaseUI {
     initPlayerState()
     {
         let gameData = GameDataManager.getInstance().getGameData();
-        this.soundCloseStateNode.active = gameData.playerInfo.closeAudio;
-        this.soundOpenStateNode.active = !gameData.playerInfo.closeAudio;
+        this.soundCloseStateNode.active = gameData.worldInfo.settingInfo.closeAudio;
+        this.soundOpenStateNode.active = !gameData.worldInfo.settingInfo.closeAudio;
     }
 
     onTouchStart()
@@ -54,7 +54,7 @@ export class MainUI extends BaseUI {
     
     onBtnSoundOpenState()
     {
-        GameDataManager.getInstance().getGameData().playerInfo.closeAudio = true;
+        GameDataManager.getInstance().getGameData().worldInfo.settingInfo.closeAudio = true;
         AudioManager.getInstance().stopAll();
         this.soundOpenStateNode.active = false;
         this.soundCloseStateNode.active = true;
@@ -66,7 +66,7 @@ export class MainUI extends BaseUI {
 
     onBtnSoundCloseState()
     {
-        GameDataManager.getInstance().getGameData().playerInfo.closeAudio = false;
+        GameDataManager.getInstance().getGameData().worldInfo.settingInfo.closeAudio = false;
         AudioManager.getInstance().resumeBGM();
         this.soundOpenStateNode.active = true;
         this.soundCloseStateNode.active = false;

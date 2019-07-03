@@ -11,38 +11,9 @@ import SublandInfo from "./Modules/SublandInfo";
 import SublandOtherInfo from "./Modules/SublandOtherInfo";
 import { SettingInfo } from "./Modules/SettingInfo";
 
-export class PlayerInfo
-{
-    public static className = "PlayerInfo";
-
-    private _gold: number = 2000;
-    public get gold(): number
-    {
-        return this._gold;
-    }
-    public set gold(value: number)
-    {
-        this._gold = value;
-        GameDataManager.getInstance().getGameData().updatePlayerInfo();
-        ListenerManager.getInstance().trigger(ListenerType.GoldChanged);
-    }
-
-    private _level: number = 1;
-    public get level(): number
-    {
-        return this._level;
-    }
-    public set level(value: number)
-    {
-        this._level = value;
-        GameDataManager.getInstance().getGameData().updatePlayerInfo();
-    }
-}
-
 export class GameData
 {
     //-----------------------serializeData----------------------------
-    playerInfo: PlayerInfo = new PlayerInfo();
     worldInfo: WorldInfo = new WorldInfo();
     //----------------------------------------------------------------
 
@@ -60,25 +31,6 @@ export class GameData
     onUpdate(dt)
     {
 
-    }
-
-    initPlayerInfo(playerInfo: PlayerInfo)
-    {
-        if(playerInfo)
-        {
-            this.playerInfo = playerInfo;
-            this.playerInfo["__proto__"] = PlayerInfo.prototype;
-        }
-        else
-        {
-            this.updatePlayerInfo();
-        }
-    }
-
-    updatePlayerInfo()
-    {
-        // serializeData
-        cc.sys.localStorage.setItem(PlayerInfo.className, this.playerInfo);
     }
 
     initWorldOtherInfo(worldOtherInfo: WorldOtherInfo)

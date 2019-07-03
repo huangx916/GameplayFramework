@@ -18,7 +18,7 @@ export class AudioManager
 
     public playSound(soundName: string, loop?: boolean, volume?: number)
     {
-        if(GameDataManager.getInstance().getGameData().playerInfo.closeAudio)
+        if(GameDataManager.getInstance().getGameData().worldInfo.settingInfo.closeAudio)
         {
             return;
         }
@@ -56,7 +56,7 @@ export class AudioManager
             return;
         }
         this.bgm = soundName;
-        if(GameDataManager.getInstance().getGameData().playerInfo.closeAudio)
+        if(GameDataManager.getInstance().getGameData().worldInfo.settingInfo.closeAudio)
         {
             return;
         }

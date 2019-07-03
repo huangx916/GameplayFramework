@@ -72,6 +72,10 @@ export class StorageUtil
                 {
                     for(let childKey in value)
                     {
+                        if(childKey === "_storageKey")
+                        {
+                            continue;
+                        }
                         this.setLocalItemImmediately(key+childKey, value[childKey]);
                     }
                 }
@@ -126,6 +130,10 @@ export class StorageUtil
         {
             for(let subKey in value)
             {
+                if(subKey === "_storageKey")
+                {
+                    continue;
+                }
                 let subValue = value[subKey];
                 if(this.pureDataCache[key])
                 {
