@@ -1,6 +1,7 @@
 import { BaseConfigContainer, ConfigContainerClass } from "../Config/BaseConfigContainer";
 import { MonsterConfigContainer } from "../Config/MonsterConfigContainer";
 import { SkillConfigContainer } from "../Config/SkillConfigContainer";
+import { WorldConfigContainer } from "../Config/WorldConfigContainer";
 
 export class ConfigManager
 {
@@ -22,6 +23,7 @@ export class ConfigManager
 
         this.loadConfig(MonsterConfigContainer, this.callback, callback);
         this.loadConfig(SkillConfigContainer, this.callback, callback);
+        this.loadConfig(WorldConfigContainer, this.callback, callback);
     }
 
     public getConfig<T extends BaseConfigContainer>(configClass: ConfigContainerClass<T>): BaseConfigContainer

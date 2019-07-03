@@ -1,0 +1,19 @@
+{
+    "mainlandDataList":
+    [
+        {"id":0,"storageKey":"Event","name":"Event","sublandDataList":
+            [
+                {"id":0,"storageKey":"SummerSurf","name":"SummerSurf","unlockPrice":"0","maxDragon":20,"inputRate":1,"outputRate":10}
+            ]
+        },
+        {"id":1,"storageKey":"Mainland1","name":"Mainland1","sublandDataList":
+            [
+                {"id":0,"storageKey":"Skyland","name":"Skyland","unlockPrice":0 ,"maxDragon":40,"inputRate":1.5,"outputRate":3},
+                {"id":1,"storageKey":"Aircastle","name":"Aircastle","unlockPrice":"117691363" ,"maxDragon":43,"inputRate":3,"outputRate":6},
+                {"id":2,"storageKey":"Rainforest","name":"Rainforest","unlockPrice":"3322392227402590000000000000000000000" ,"maxDragon":46,"inputRate":4.5,"outputRate":9},
+                {"id":3,"storageKey":"Hub","name":"Hub","unlockPrice":"3322392227402590000000000000000000000"  ,"maxDragon":49,"inputRate":6,"outputRate":12},
+                {"id":4,"storageKey":"Lifetree","name":"Lifetree","unlockPrice":"3322392227402590000000000000000000000"  ,"maxDragon":52,"inputRate":7.5,"outputRate":15}
+            ]
+        }
+    ]
+}

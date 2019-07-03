@@ -4,6 +4,7 @@ export class ListenerType {
     public static readonly UpdateMainUI = "UpdateMainUI";
     public static readonly LoopUpdate = "LoopUpdate";
     public static readonly GoldChanged = "GoldChanged";
+    public static readonly GemChanged = "GemChanged";
 
     public static readonly OnMergeDragon = "OnMergeDragon";
     public static readonly OnUnlockSuccess = "OnUnlockSuccess";
@@ -19,4 +20,8 @@ export class ListenerType {
     public static readonly OfflineReward = "OfflineReward";
     public static readonly OnTaskRedPoint = "OnTaskRedPoint";
     public static readonly OnInitStage = "OnInitStage";
+
+    public static readonly WorldCoinsChanged = "WorldCoinsChanged";
+    public static readonly MainlandCoinsChanged = "MainlandCoinsChanged";
+    public static readonly SublandCoinsChanged = "SublandCoinsChanged";
 }
