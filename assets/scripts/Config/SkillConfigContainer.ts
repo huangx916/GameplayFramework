@@ -20,11 +20,13 @@ export class SkillConfigContainer extends BaseConfigContainer {
         cc.loader.loadRes(ConstValue.CONFIG_FILE_DIR + "SkillConfig", (err, object)=>
         {
             if (err) {
-                cc.log("load SkillConfig.json err");
+                cc.log("load SkillConfig.txt err");
                 cc.log(err);
             }
             else {
-                object = object.json;
+                let encode = object.text;
+                let decode = window.atob(encode);
+                object = JSON.parse(decode);
                 for(var i in object)
                 {
                     this.skillConfigData[i] = object[i];

@@ -35,11 +35,13 @@ export class WorldConfigContainer extends BaseConfigContainer {
         cc.loader.loadRes(ConstValue.CONFIG_FILE_DIR + "WorldConfig", (err, object)=>
         {
             if (err) {
-                cc.log("load WorldConfig.json err");
+                cc.log("load WorldConfig.txt err");
                 cc.log(err);
             }
             else {
-                object = object.json;
+                let encode = object.text;
+                let decode = window.atob(encode);
+                object = JSON.parse(decode);
                 this.worldConfigData = object;
                 if(callback)
                 {

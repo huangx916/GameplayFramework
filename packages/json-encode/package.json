@@ -1,0 +1,19 @@
+{
+  "name": "json-encode",
+  "version": "0.0.1",
+  "description": "加密JSON配置文件",
+  "author": "huangxin",
+  "main": "main.js",
+  "main-menu": {
+    "Tools/Encode Json": {
+      "message": "json-encode:open-panel"
+    }
+  },
+  "panel": {
+    "main": "panel/index.js",
+    "type": "dockable",
+    "title": "Encode Json",
+    "width": 400,
+    "height": 300
+  }
+}
