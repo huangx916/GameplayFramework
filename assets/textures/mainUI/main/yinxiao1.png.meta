@@ -1,14 +1,13 @@
 {
-  "ver": "2.3.0",
+  "ver": "2.2.0",
   "uuid": "030c7c60-ec6e-40d4-bab7-c77d9bf68c46",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "platformSettings": {},
   "subMetas": {
     "yinxiao1": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "4d88e37f-60b7-403b-bf30-e30b9b20a4df",
       "rawTextureUuid": "030c7c60-ec6e-40d4-bab7-c77d9bf68c46",
       "trimType": "auto",

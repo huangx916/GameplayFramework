@@ -1,0 +1,38 @@
+{
+	"services": [
+		{
+			"service_id": "242",
+			"service_name": "Agora Voice",
+			"service_icon": "https://account.cocos.com/uploads/client_icon/2019-07-16/273952d155b4cdb72d2b1bc61de91ade.png",
+			"service_desc": "Build the future of communications with the world’s leading voice、video、and interactive broadcasting platform. Agora delivers easy to embed Real-Time Engagement APIs which includes all the development tools and cloud infrastructure needed for mobile、web、and desktop applications.",
+			"service_title": "SDKBuilt-in real-time Audio SDK",
+			"service_guide_url": "https://docs.agora.io/en/Interactive Gaming/game_c?platform=Cocos Creator",
+			"service_sample_url": "https://github.com/AgoraIO/Voice-Call-for-Mobile-Gaming/tree/master/Basic-Voice-Call-for-Gaming/Hello-CocosCreator-Voice-Agora",
+			"service_dev_url": "https://sso.agora.io/api/oauth/cocos/login",
+			"service_type": "3",
+			"service_type_zh": "公司和个人游戏",
+			"support_platform": [
+				"Android",
+				"iOS",
+				"HTML5"
+			],
+			"package_download_url": "http://download.cocos.com/CocosServices/plugins/service-agora/1.0.2_2.2.3.20_2.5.2.zip",
+			"package_version_desc": "解决Bug：onAudioVolumeIndication 回调收不到.",
+			"service_component_name": "service-agora",
+			"package_versions": [
+				"1.0.1_2.2.3.20_2.5.2",
+				"1.0.2_2.2.3.20_2.5.2"
+			],
+			"build_platform": [
+				"web-mobile",
+				"web-desktop",
+				"android",
+				"ios"
+			],
+			"require_verify": 1,
+			"service_price": "The service according to usage billing，<a href='https://docs.agora.io/en/Agora Platform/billing_faq?platform=All Platforms'> <font color='#DDDDDD'> billing rules </font> </a>，the fees incurred by the third party from your <a href='https://account.cocos.com/#/finance/finance_list'> <font color='#DDDDDD'> Cocos balances </font></a>.",
+			"packpage_version_desc": "",
+			"service_protocol": "Game for the first time to open the service，the Cocos after notification service for game on service and initialization parameters，service party may according to need to get your Cocos account information，such as account basic information，game basic information，account balance，click on the confirm open button that is seen as you agree to the service to access your account information，See < a href='http://auth.cocos.com/CocosServiceAgreement.html'>Cocos user service agreement </a> and <a href='http://auth.cocos.com/PrivacyPolicy.html'>Cocos privacy policy </a>"
+		}
+	]
+}
