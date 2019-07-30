@@ -19,6 +19,7 @@ export class GameMain extends cc.Component
         LogWrap.info("test info");
         LogWrap.warn("test warn");
         LogWrap.err("test err");
+        
 
         let frameSize = cc.view.getFrameSize();
         let bFitWidth = (frameSize.width / frameSize.height) < (750 / 1334)
