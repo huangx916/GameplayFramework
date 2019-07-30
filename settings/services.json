@@ -34,5 +34,9 @@
 			"packpage_version_desc": "",
 			"service_protocol": "Game for the first time to open the service，the Cocos after notification service for game on service and initialization parameters，service party may according to need to get your Cocos account information，such as account basic information，game basic information，account balance，click on the confirm open button that is seen as you agree to the service to access your account information，See < a href='http://auth.cocos.com/CocosServiceAgreement.html'>Cocos user service agreement </a> and <a href='http://auth.cocos.com/PrivacyPolicy.html'>Cocos privacy policy </a>"
 		}
-	]
+	],
+	"game": {
+		"name": "UNKNOW GAME",
+		"appid": "UNKNOW"
+	}
 }

@@ -324,6 +324,42 @@ void main () {
     gl_FragColor = vec4(color.rgb, c.a);
 }
 `
+    },
+    Ramp: {
+        vert: MVP,
+        frag: 
+`
+uniform sampler2D texture;
+uniform vec4 color;
+varying vec2 uv0;
+uniform vec4 UVoffset;
+uniform float rotated;
+void main () {
+    vec4 c = color * texture2D(texture, uv0);
+
+    vec2 UVnormalize;
+    UVnormalize.x = (uv0.x-UVoffset.x)/(UVoffset.z-UVoffset.x);
+    UVnormalize.y = (uv0.y-UVoffset.y)/(UVoffset.w-UVoffset.y);
+    if(rotated > 0.5)
+    {
+        float temp = UVnormalize.x;
+        UVnormalize.x = UVnormalize.y;
+        UVnormalize.y = 1.0 - temp;
+    }
+
+    float alpha = c.a;
+    if(alpha < 0.5)
+    {
+        gl_FragColor = vec4(0,0,0,0);
+    }
+    else
+    {
+        alpha = clamp(UVnormalize.y - 1.0 / 2.0, 0.0, 1.0);
+        alpha = 1.0 - alpha * 2.0;
+        gl_FragColor = vec4(c.rgb, alpha*alpha);
+    }
+}
+`
     }
 };
 

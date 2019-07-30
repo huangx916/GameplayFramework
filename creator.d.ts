@@ -9975,7 +9975,6 @@ declare module cc {
 		static localStorage: any;		
 		/** The capabilities of the current platform */
 		static capabilities: any;		
-        static __audioSupport: any;
 		/**
 		!#en
 		Get the network type of current device, return cc.sys.NetworkType.LAN if failure.

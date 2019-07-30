@@ -19,6 +19,7 @@ export enum ShaderType {
     Fluxay,
     FluxaySuper,
     Pure,
+    Ramp,
 }
 
 export default class ShaderManager {
@@ -43,6 +44,7 @@ export default class ShaderManager {
             let material = new ShaderMaterial(name, lab.vert, lab.frag, lab.defines || []);
             let texture = sprite.spriteFrame.getTexture();
             material.setTexture(texture);
+            material.setUVoffset(sprite.spriteFrame);
             material.updateHash();
             let sp = sprite as any;
             sp._material = material;
